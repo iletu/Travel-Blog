@@ -1,0 +1,96 @@
+.headline-info {
+    display: flex;
+    flex-direction: row;
+    gap: 26px;
+}
+
+.eyebrow {
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: var(--dark-green);
+    margin-bottom: 8px;
+}
+
+h1 {
+    font-family: 'Arima';
+    font-weight: 700;
+    font-size: 4rem;
+    color: var(--yellow);
+}
+
+.description {
+    font-size: 1.75rem;
+    padding-top: 8px;
+}
+
+dl {
+    margin-top: 40px;
+    display: flex;
+    gap: 32px;
+}
+
+dl > div {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;  
+}
+
+.calender-icon {
+    width: 16px;  
+}
+
+.eyeglass-icon {
+    width: 20px;
+}
+
+.visibility-icon {
+    width: 20px;
+}
+
+.share-icon {
+    width: 16px;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+figure img {
+    height: 120px;
+    object-fit: cover;
+    object-position: center;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    margin-bottom: 16px;
+}
+
+figcaption {
+    font-family: 'Arima';
+    font-weight: 700;
+    font-size: 1.25rem;
+    padding-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+figcaption p {
+    font-weight: 400;
+}
+
+.author-info {
+    background-color: var(--light-green);
+    padding: 16px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.author-info > p{
+    width: 240px;  
+}
+
