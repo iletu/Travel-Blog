@@ -29,14 +29,14 @@ dl {
     gap: 32px;
 }
 
-dl > div {
+dl>div {
     display: flex;
     flex-direction: row;
-    gap: 6px;  
+    gap: 6px;
 }
 
 .calender-icon {
-    width: 16px;  
+    width: 16px;
 }
 
 .eyeglass-icon {
@@ -90,7 +90,99 @@ figcaption p {
 
 }
 
-.author-info > p{
-    width: 240px;  
+.author-info>p {
+    width: 240px;
 }
 
+.text-article {
+    font-size: 1.5rem;
+}
+
+.graph {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.graph h2 {
+    font-family: 'Arima';
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 24px;
+}
+
+.graph img {
+    width: 640px;
+    border-radius: 53px;
+    filter: drop-shadow(-2px 4px 11.6px rgba(0, 0, 0, 0.25));
+}
+
+.graph p {
+    margin-top: 88px;
+    font-size: 1.5rem;
+}
+
+.two-graphs {
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+    justify-content: center;
+}
+
+.two-graphs-img {
+    width: 520px !important;
+    height: 470px;
+    object-fit: cover;
+}
+
+.two {
+    width: 520px;
+}
+
+.two p {
+    margin-top: 0;
+    margin-bottom: 24px;
+    flex-grow: 1;
+}
+
+.first {
+    margin-top: -40px;
+}
+
+.share-cta {
+    width: 460px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    position: relative;
+}
+
+.share-cta p {
+    text-align: center;
+}
+
+.share-cta button {
+    background-color: var(--dark-green);
+    color: var(--yellow);
+    font-family: 'Arima';
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 40px;
+    padding: 8px 24px;
+    width: fit-content;
+}
+
+.share-cta button img {
+    margin-right: 10px;
+    width: 32px;
+}
+
+.arrow {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
