@@ -1,0 +1,45 @@
+/* Video Seite wie Wireframe 3 */
+.video-hero {
+  background: var(--bg-alt);
+  border-radius: var(--radius-xl);
+  aspect-ratio:16/9;
+  display:grid;
+  place-items:center;
+  position:relative;
+  overflow:hidden;
+  background-image: 
+    linear-gradient(45deg, #ddd 25%, transparent 25%),
+    linear-gradient(-45deg, #ddd 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #ddd 75%),
+    linear-gradient(-45deg, transparent 75%, #ddd 75%);
+  background-size: 24px 24px;
+  background-position: 0 0, 0 12px, 12px -12px, -12px 0px;
+}
+.play-btn {
+  width:64px; height:64px;
+  border-radius:50%;
+  background: var(--primary-dark);
+  color:white;
+  display:grid;
+  place-items:center;
+  font-size:24px;
+  border:3px solid white;
+  cursor:pointer;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  transition:.2s;
+}
+.play-btn:hover { transform:scale(1.05); }
+.bullet-list { margin:24px 0; }
+.bullet-list li {
+  position:relative;
+  padding-left:16px;
+  margin-bottom:12px;
+  font-size:14px;
+}
+.bullet-list li::before {
+  content:"•";
+  position:absolute;
+  left:0;
+  color: var(--primary);
+  font-weight:bold;
+}

@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookie Preferences - Travel Blog 2026</title>
+  <link rel="stylesheet" href="../styles/variable.css">
+  <link rel="stylesheet" href="../styles/font.css">
+  <link rel="stylesheet" href="../styles/standard.css">
+  <style>
+    .toggle { width:44px; height:24px; background:#ddd; border-radius:999px; position:relative; cursor:pointer; transition:.2s; }
+    .toggle.active { background: var(--primary); }
+    .toggle::after { content:""; position:absolute; width:18px; height:18px; background:white; border-radius:50%; top:3px; left:3px; transition:.2s; }
+    .toggle.active::after { left:23px; }
+    .cookie-row { display:flex; justify-content:space-between; align-items:center; padding:20px 0; border-bottom:1px solid var(--border); }
+  </style>
 </head>
 <body>
-    
+<header class="site-header"><div class="container"><a class="logo" href="../test/index.html">Travel Blog 2026</a><nav class="nav"><a href="../test/index.html">Home</a><a href="imprint.html">Imprint</a></nav></div></header>
+<main class="container section">
+  <h1 style="font-size:42px; margin-bottom:8px;">Cookie Preferences</h1>
+  <p style="color:var(--text-light); margin-bottom:32px; max-width:600px;">We use cookies to make your experience better. You can choose what you allow.</p>
+  <div style="max-width:700px; background:white; padding:32px; border-radius:var(--radius-xl); border:1px solid var(--border);">
+    <div class="cookie-row"><div><strong>Essential</strong><br><span style="font-size:12px; color:var(--text-light);">Required for site to work</span></div><div class="toggle active" style="opacity:.5; pointer-events:none;"></div></div>
+    <div class="cookie-row"><div><strong>Analytics</strong><br><span style="font-size:12px;">Helps us understand usage</span></div><div class="toggle" onclick="this.classList.toggle('active')"></div></div>
+    <div class="cookie-row"><div><strong>Marketing</strong><br><span style="font-size:12px;">For personalized offers</span></div><div class="toggle" onclick="this.classList.toggle('active')"></div></div>
+    <div class="cookie-row"><div><strong>Social Media</strong><br><span style="font-size:12px;">Enables TikTok, Instagram embeds</span></div><div class="toggle active" onclick="this.classList.toggle('active')"></div></div>
+    <div style="margin-top:24px; display:flex; gap:12px;"><button class="btn btn-primary">Save Preferences</button><button class="btn">Accept All</button></div>
+  </div>
+</main>
+<footer class="site-footer"><div class="container"><span>© Travel Blog 2026</span><div class="footer-links"><a href="imprint.html">Imprint</a><a href="cookie_preferences.html">Cookie Preferences</a></div></div></footer>
 </body>
 </html>
