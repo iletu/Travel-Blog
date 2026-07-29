@@ -4,3 +4,18 @@
     scroll-behavior: smooth;
     font-size: 16px;
 }
+
+.cwp-padding {
+    padding: 32px max(calc(50% - 720px), 146px);
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding-inline-start: 0px;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
