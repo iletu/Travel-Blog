@@ -1,0 +1,24 @@
+header {
+    background-color: var(--dark-green);
+    padding: 32px max(calc(50% - 720px), 146px);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 72px;
+}
+
+img {
+    padding-right: 30px;
+    height: 72px;
+}
+
+a {
+    font-family: 'Arima';
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    color: var(--white);
+    text-decoration: none;
+}
