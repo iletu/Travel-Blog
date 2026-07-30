@@ -1,45 +1,504 @@
-/* Video Seite wie Wireframe 3 */
-.video-hero {
-  background: var(--bg-alt);
-  border-radius: var(--radius-xl);
-  aspect-ratio:16/9;
-  display:grid;
-  place-items:center;
-  position:relative;
-  overflow:hidden;
-  background-image: 
-    linear-gradient(45deg, #ddd 25%, transparent 25%),
-    linear-gradient(-45deg, #ddd 25%, transparent 25%),
-    linear-gradient(45deg, transparent 75%, #ddd 75%),
-    linear-gradient(-45deg, transparent 75%, #ddd 75%);
-  background-size: 24px 24px;
-  background-position: 0 0, 0 12px, 12px -12px, -12px 0px;
+/* ================================================================
+   video.css  –  Copenhagen-Artikelseite  (nur diese Seite)
+   ----------------------------------------------------------------
+   WICHTIG:
+   Alle Klassen hier beginnen mit  cph-  (= Copenhagen).
+   Dadurch kollidiert NICHTS mit deiner globalen standard.css
+   (die z. B. .site-header weiß macht und über .logo::before ein
+   "B"-Kästchen einfügt). Diese Seite bringt ihren eigenen grünen
+   Header/Footer mit.
+
+   Farben/Schriften kommen aus deinen Dateien:
+     variable.css  ->  --primary (Grün), --secondary (Gold),
+                       --primary-light (Mint), --text (Braun) ...
+     font.css      ->  --font-serif (Fraunces), --font-sans (Inter)
+   ================================================================ */
+
+
+/* =============================================================
+   Basis nur für diese Seite
+============================================================= */
+.cph-page {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-sans);
+    line-height: 1.7;
 }
-.play-btn {
-  width:64px; height:64px;
-  border-radius:50%;
-  background: var(--primary-dark);
-  color:white;
-  display:grid;
-  place-items:center;
-  font-size:24px;
-  border:3px solid white;
-  cursor:pointer;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-  transition:.2s;
+
+/* Zentrierter Inhalt mit Seitenabstand */
+.cph-container {
+    width: min(100% - 80px, 1200px);
+    margin: 0 auto;
 }
-.play-btn:hover { transform:scale(1.05); }
-.bullet-list { margin:24px 0; }
-.bullet-list li {
-  position:relative;
-  padding-left:16px;
-  margin-bottom:12px;
-  font-size:14px;
+
+
+/* =============================================================
+   1) HEADER (grüner Balken oben)
+============================================================= */
+.cph-header {
+    background: var(--primary);
+    color: var(--white);
 }
-.bullet-list li::before {
-  content:"•";
-  position:absolute;
-  left:0;
-  color: var(--primary);
-  font-weight:bold;
+
+.cph-header-inner {
+    min-height: 74px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cph-logo img {
+    height: 54px;
+    width: auto;
+}
+
+.cph-nav {
+    display: flex;
+    gap: 44px;
+    font-weight: 500;
+}
+
+.cph-nav a {
+    opacity: 0.95;
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.cph-nav a:hover {
+    color: var(--secondary);
+    opacity: 1;
+}
+
+/* Burger-Button (nur auf dem Handy) */
+.cph-burger {
+    display: none;
+    font-size: 26px;
+    color: var(--white);
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+
+
+/* =============================================================
+   2) ARTIKEL-KOPF (Titel links + Autoren-Karte rechts)
+============================================================= */
+.cph-top {
+    width: min(100% - 80px, 1200px);
+    margin: 0 auto;
+    padding: 70px 0 30px;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 60px;
+    align-items: start;
+}
+
+.cph-eyebrow {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--primary);
+    margin-bottom: 12px;
+}
+
+/* Große goldene Überschrift.
+   (font.css färbt h1 normalerweise dunkelgrün – hier überschreiben
+    wir das gezielt auf Gold.) */
+.cph-title {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-size: clamp(40px, 5vw, 60px);
+    line-height: 1.08;
+    letter-spacing: -0.5px;
+    color: var(--secondary);
+    margin-bottom: 24px;
+}
+
+.cph-subtitle {
+    max-width: 620px;
+    font-size: 17px;
+    color: var(--text);
+    margin-bottom: 28px;
+}
+
+/* Meta-Zeile: Datum, Lesezeit, gelesen, geteilt */
+.cph-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 26px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--primary);
+}
+
+.cph-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+}
+
+/* Kleine, dünne grüne Linien-Icons */
+.cph-icon {
+    width: 17px;
+    height: 17px;
+    fill: none;
+    stroke: var(--primary);
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* --- Autoren-Karte --- */
+.cph-author {
+    background: var(--primary-light);
+    border-radius: var(--radius-lg);
+    padding: 28px 24px;
+    text-align: center;
+}
+
+.cph-avatar {
+    width: 118px;
+    height: 118px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 14px;
+    border: 3px solid var(--white);
+}
+
+.cph-author-name {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--text-dark);
+}
+
+.cph-author-role {
+    font-size: 14px;
+    color: var(--text-light);
+    margin-bottom: 12px;
+}
+
+.cph-author-bio {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: var(--text-light);
+}
+
+
+/* =============================================================
+   3) INHALT (Text, Video, Liste)
+============================================================= */
+.cph-content {
+    width: min(100% - 80px, 1200px);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.cph-content p {
+    margin: 22px 0;
+    color: var(--text);
+}
+
+/* --- Video-Bild mit runden Ecken --- */
+.cph-video {
+    position: relative;
+    width: min(100% - 80px, 1200px);
+    max-width: 1000px;
+    margin: 40px auto;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+}
+
+.cph-video img {
+    width: 100%;
+    display: block;
+}
+
+/* Das weiße Play-Symbol ist bereits Teil des Bildes.
+   Dieser Button liegt unsichtbar darüber und macht es klickbar. */
+.cph-play {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: 0;
+    color: transparent;
+    cursor: pointer;
+}
+
+.cph-video:hover img {
+    transform: scale(1.02);
+    transition: transform 0.4s ease;
+}
+
+/* --- Aufzählung mit eigenen Punkten --- */
+.cph-list {
+    margin: 6px 0 22px;
+}
+
+.cph-list li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 8px;
+    color: var(--text);
+}
+
+.cph-list li::before {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 12px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--text);
+}
+
+
+/* =============================================================
+   4) PRO-TIPPS (grünes Etikett + Mint-Box)
+============================================================= */
+.cph-protips {
+    position: relative;
+    width: min(100% - 80px, 1200px);
+    max-width: 1000px;
+    margin: 55px auto 20px;
+}
+
+.cph-badge {
+    position: absolute;
+    top: -18px;
+    left: 34px;
+    z-index: 2;
+    padding: 9px 18px;
+    background: var(--primary);
+    color: var(--white);
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 600;
+    font-size: 17px;
+    border-radius: 10px;
+    transform: rotate(-4deg);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.cph-probox {
+    background: var(--primary-light);
+    border-radius: var(--radius-lg);
+    padding: 44px 40px 32px;
+}
+
+.cph-probox ol {
+    list-style: decimal;
+    padding-left: 22px;
+    color: var(--text);
+}
+
+.cph-probox li {
+    margin-bottom: 12px;
+    padding-left: 6px;
+}
+
+.cph-probox a {
+    color: var(--primary-dark);
+    font-weight: 600;
+}
+
+.cph-probox a:hover {
+    text-decoration: underline;
+}
+
+
+/* =============================================================
+   5) SHARE (Aufruf + Pfeil + Button)
+============================================================= */
+.cph-share {
+    text-align: center;
+    padding: 40px 0 90px;
+}
+
+.cph-follow {
+    font-family: var(--font-serif);
+    font-size: 21px;
+    color: var(--text-dark);
+    line-height: 1.5;
+    margin-bottom: 14px;
+}
+
+/* Pfeil + Button in einer zentrierten Reihe */
+.cph-share-row {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Handgezeichneter gelber Pfeil (echtes SVG, links vom Button) */
+.cph-arrow {
+    width: 84px;
+    height: 64px;
+    flex: none;                 /* nicht schrumpfen */
+    align-self: flex-start;     /* etwas höher, wie in der Vorlage */
+    margin-top: -4px;
+}
+
+.cph-share-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 30px;
+    background: var(--primary);
+    color: var(--secondary);
+    font-family: var(--font-serif);
+    font-weight: 600;
+    font-size: 18px;
+    border: 0;
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.cph-share-btn:hover {
+    transform: translateY(-2px);
+    background: var(--primary-dark);
+}
+
+
+/* =============================================================
+   6) FOOTER (grüner Balken unten)
+============================================================= */
+.cph-footer {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.cph-footer-inner {
+    min-height: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.cph-footer-left {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    font-size: 14px;
+}
+
+.cph-footer-left a:hover {
+    color: var(--secondary);
+}
+
+.cph-social {
+    display: flex;
+    gap: 14px;
+}
+
+.cph-social a {
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    color: var(--primary);
+    background: var(--secondary);
+    border-radius: 8px;
+}
+
+.cph-social a:hover {
+    opacity: 0.85;
+}
+
+
+/* =============================================================
+   7) RESPONSIVE
+============================================================= */
+
+/* ---------- TABLET (bis 900px) ---------- */
+@media (max-width: 900px) {
+
+    .cph-container,
+    .cph-top,
+    .cph-content,
+    .cph-video,
+    .cph-protips {
+        width: min(100% - 48px, 1200px);
+    }
+
+    .cph-top {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .cph-author {
+        max-width: 420px;
+    }
+}
+
+
+/* ---------- HANDY (bis 640px) ---------- */
+@media (max-width: 640px) {
+
+    .cph-burger {
+        display: block;
+    }
+
+    .cph-nav {
+        position: absolute;
+        top: 74px;
+        left: 0;
+        right: 0;
+        z-index: 30;
+        flex-direction: column;
+        gap: 0;
+        background: var(--primary-dark);
+        display: none;
+    }
+
+    .cph-nav.open {
+        display: flex;
+    }
+
+    .cph-nav a {
+        padding: 15px 24px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .cph-top {
+        padding: 45px 0 24px;
+    }
+
+    .cph-title {
+        font-size: 34px;
+    }
+
+    .cph-meta {
+        gap: 10px 18px;
+    }
+
+    .cph-probox {
+        padding: 40px 22px 28px;
+    }
+
+    .cph-badge {
+        left: 20px;
+    }
+
+    .cph-arrow {
+        width: 64px;
+        transform: translateX(-70px);
+    }
+
+    .cph-footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px 0;
+    }
+
+    .cph-footer-left {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
 }
