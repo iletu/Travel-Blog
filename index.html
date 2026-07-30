@@ -1,269 +1,48 @@
 <!DOCTYPE html>
-<html lang="de">
-
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="./assets/img/logo-travel-blog.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Copenhagen in 3 Days – Travel Blog</title>
-    <!-- Nur diese eine CSS-Datei. KEIN standard.css (das erzeugt das "B"). -->
-    <link rel="stylesheet" href="style.css">
-  </head>
-
-  <body>
-
-    <!-- ========== HEADER ========== -->
-    <header class="site-header">
-      <div class="header-inner">
-        <a href="#" class="logo">
-          <img src="../assets/img/logo 03 1.png" alt="Travel Blog">
-        </a>
-        <nav class="main-navigation">
-          <a href="#">Highlights</a>
-          <a href="#">FAQ</a>
-          <a href="#">Contact</a>
+    <title>Travel-Blog</title>
+    <link rel="stylesheet" href="./styles/variable.css">
+    <link rel="stylesheet" href="./styles/standard.css">
+    <link rel="stylesheet" href="./styles/font.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="cwp-padding">
+        <nav>
+            <a><img src="./assets/img/logo-travel-blog.png" alt="Logo - Travel-Blog"></a>
+            <ul>
+                <li><a href="#highlights">Highlights</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
-        <button class="menu-button" aria-label="Menü öffnen">&#9776;</button>
-      </div>
     </header>
 
-    <main class="page">
+    <main class="cwp-padding">
+        <section classe="hero">
 
-      <!-- ========== ARTICLE TOP ========== -->
-      <section class="article-top">
-        <div class="article-main">
-          <p class="eyebrow">A Stylish Scandinavian Escape</p>
-          <h1 class="title">Copenhagen in 3 Days: Big Experiences, Smart Spending</h1>
-          <p class="subtitle">
-            Discover Copenhagen, where historic charm meets modern design, vibrant
-            cycling culture and waterfront living. Experience the heart of Scandinavia
-            through cozy cafés, innovative cuisine, and effortlessly cool city life.
-          </p>
-          <div class="meta">
-            <span>
-              <svg class="meta-icon" viewBox="0 0 24 24">
-                <rect x="3" y="5" width="18" height="16" rx="2" />
-                <path d="M3 9h18M8 3v4M16 3v4" />
-              </svg>
-              Date: 26.01.2026
-            </span>
-            <span>
-              <svg class="meta-icon" viewBox="0 0 24 24">
-                <circle cx="12" cy="12" r="9" />
-                <path d="M12 7v5l3 3" />
-              </svg>
-              Reading time: 6 min.
-            </span>
-            <span>
-              <svg class="meta-icon" viewBox="0 0 24 24">
-                <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z" />
-                <circle cx="12" cy="12" r="3" />
-              </svg>
-              Read: 164
-            </span>
-            <span>
-              <svg class="meta-icon" viewBox="0 0 24 24">
-                <circle cx="6" cy="12" r="2.5" />
-                <circle cx="18" cy="6" r="2.5" />
-                <circle cx="18" cy="18" r="2.5" />
-                <path d="M8.2 10.8l7.6-3.6M8.2 13.2l7.6 3.6" />
-              </svg>
-              Shared: 18
-            </span>
-          </div>
-        </div>
-
-        <aside class="author-card">
-          <img class="avatar" src="../assets/img/avatar.png" alt="Tamara Wallker">
-          <div class="author-name">Tamara Wallker</div>
-          <div class="author-role">Author</div>
-          <p class="author-bio">
-            I've been traveling since 2017, chasing moments instead of plans.
-            I'm fascinated by snakes, love sharks, would happily spend weeks deep in
-            the jungle, and can never get enough papaya. As long as there's a next
-            destination, I know I'm exactly where I'm meant to be.
-          </p>
-        </aside>
-      </section>
-
-      <!-- ========== CONTENT 1 ========== -->
-      <section class="content">
-        <p>
-          Lorem ipsum dolor sit amet consectetur. Egestas a enim vestibulum malesuada.
-          Ante in commodo porta scelerisque turpis gravida semper. Lorem ipsum dolor sit
-          amet consectetur. Egestas a enim vestibulum malesuada. Ante in commodo porta
-          scelerisque turpis gravida semper.
-        </p>
-      </section>
-
-      <!-- ========== VIDEO (lokal, kein externer Server) ==========
-           Vorschaubild (Poster) mit Play-Symbol. Beim Klick wird das
-           echte <video> eingeblendet und startet. Responsiv über width:100%. -->
-      <div class="video-wrap" id="cphVideo">
-        <img class="video-poster" src="../assets/img/Video.jpg" alt="Nyhavn, Copenhagen – Video abspielen">
-        <video class="video-el" controls playsinline preload="none" poster="../assets/img/Video.jpg">
-          <source src="../assets/video/copenhagen.mp4" type="video/mp4">
-          Dein Browser kann dieses Video nicht abspielen.
-        </video>
-      </div>
-
-      <!-- ========== CONTENT 2 + LISTE ========== -->
-      <section class="content">
-        <p>
-          Lorem ipsum dolor sit amet consectetur. Egestas a enim vestibulum malesuada.
-          Ante in commodo porta scelerisque turpis gravida semper. Lorem ipsum dolor sit
-          amet consectetur. Egestas a enim vestibulum malesuada. Eta scelerisque turpis
-          gravida semper. Lorem ipsum dolor sit ameta enim vestibulum malesuada. Antenes
-          intrew commodo porta scelerisque turpis. ipsum dolor sit ametert consectetur.
-          Egestas a enim vestibulum malesuada. Ante in comm odo porta scelerisque turpis
-          gravida semper.
-        </p>
-
-        <p class="list-intro">Lorem ipsum dolor sit amet consectetur. Egestas a enim vestibulum malesuada:</p>
-
-        <ul class="custom-list">
-          <li>turpis gravida <strong>semper.</strong> Lorem ipsum dolor sit amet consectetur.
-            Egestas a enim vestibulum malesuada. Eta scelerisque turpis gravida semper.</li>
-          <li><strong>Lorem ipsum</strong> dolor sit ameta enim vestibulum malesuada. Ante
-            intrew commodo porta scelerisque turpis. ipsum dolor sit amet consectetur.
-            Egestas a enim vestibulum malesuada.</li>
-          <li>Ante in commodo porta <strong>scelerisque</strong> turpis gravida semper.</li>
-        </ul>
-
-        <p>
-          Lorem ipsum dolor sit amet consectetur. Egestas a enim vestibulum malesuada.
-          Ante in commodo porta scelerisque turpis gravida semper. Lorem ipsum dolor sit
-          amet consectetur. Egestas a enim vestibulum malesuada. Eta scelerisque turpis
-          gravida semper. Lorem ipsum dolor sit amet consectetur. Egestas a enim vestibulum
-          malesuada. Ante in commodo porta scelerisque turpis gravida semper. Lorem ipsum
-          dolor sit ameta enim vestibulum malesuada. Antenes intrew commodo porta
-          scelerisque turpis. ipsum dolor sit ametert consectetur. Egestas a enim vestibulum
-          malesuada. Ante in comm odo porta scelerisque turpis gravida semper.
-        </p>
-      </section>
-
-      <!-- ========== PRO TIPPS ========== -->
-      <div class="pro-tipps-wrap">
-        <div class="pro-badge"><span class="pro-icon">&#128161;</span> Pro tipps</div>
-        <div class="pro-box">
-          <ol>
-            <li>Ante in commodo porta scelerisque turpis gravida semper.
-              <a href="#">Useful link.</a> Egestas a enim vestibulum malesuada. Eta
-              scelerisque turpis gravida semper.
-            </li>
-            <li>Lorem ipsum dolor sit ameta enim vestibulum malesuada. Ante intrew commodo
-              porta scelerisque turpis. ipsum dolor sit amet consectetur. Egestas a enim
-              vestibulum malesuada. Ante in commodo porta scelerisque turpis gravida semper.</li>
-          </ol>
-        </div>
-      </div>
-
-      <!-- ========== SHARE ========== -->
-      <div class="share-section">
-        <p class="follow-text">
-          Follow me for more content like this, and<br>
-          share the article with your friends!
-        </p>
-
-        <div class="share-anchor">
-          <!-- Große geschwungene Kurve links, Pfeilspitze zeigt auf den Button -->
-          <svg class="share-arrow" viewBox="0 0 150 104" aria-hidden="true">
-            <path d="M14 8 C 2 58, 34 92, 138 86" fill="none" stroke="#F1C84E" stroke-width="5"
-              stroke-linecap="round" />
-            <path d="M123 74 L 142 87 L 120 95" fill="none" stroke="#F1C84E" stroke-width="5" stroke-linecap="round"
-              stroke-linejoin="round" />
-          </svg>
-          <button class="share-btn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
-              stroke-linejoin="round">
-              <circle cx="6" cy="12" r="2.4" />
-              <circle cx="18" cy="6" r="2.4" />
-              <circle cx="18" cy="18" r="2.4" />
-              <path d="M8.1 10.9l7.8-3.7M8.1 13.1l7.8 3.7" />
-            </svg>
-            Share
-          </button>
-        </div>
-      </div>
-
+        </section>
     </main>
 
-    <!-- ========== FOOTER ========== -->
-    <footer class="site-footer">
-      <div class="footer-inner">
+    <footer class="cwp-padding">
         <div class="footer-left">
-          <span>&copy; Travel Blog 2026</span>
-          <a href="#">Imprint</a>
-          <a href="#">Cookie Preferences</a>
+            <p><img src="./assets/icons/copyright.png" alt="copyright"> Travel Blog 2026</p>
+            <ul>
+                <li><a href="">Imprint</a></li>
+                <li><a href="">Cookie Preferences</a></li>
+            </ul>
         </div>
-        <div class="footer-social">
-          <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M14 4c.5 2.3 2 3.8 4.3 4v2.6c-1.5 0-2.9-.4-4.3-1.2v5.5a5.2 5.2 0 1 1-5.2-5.2c.3 0 .6 0 .9.1v2.7a2.5 2.5 0 1 0 1.8 2.4V4H14z" />
-            </svg></a>
-          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M22 8.2a3 3 0 0 0-2.1-2.1C18 5.6 12 5.6 12 5.6s-6 0-7.9.5A3 3 0 0 0 2 8.2 31 31 0 0 0 1.7 12 31 31 0 0 0 2 15.8a3 3 0 0 0 2.1 2.1c1.9.5 7.9.5 7.9.5s6 0 7.9-.5a3 3 0 0 0 2.1-2.1c.3-1.2.3-3.8.3-3.8s0-2.6-.3-3.8zM10 15V9l5.2 3L10 15z" />
-            </svg></a>
-          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M15 3h-2.5C10 3 9 4.6 9 6.8V9H7v3h2v9h3v-9h2.4l.6-3H12V7.2c0-.9.3-1.2 1.1-1.2H15V3z" />
-            </svg></a>
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-              stroke-width="2">
-              <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
-              <circle cx="12" cy="12" r="4" />
-              <circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none" />
-            </svg></a>
-        </div>
-      </div>
+
+        <ul class="footer-right">
+            <li><a href=""><img src="./assets/icons/tiktok.png" alt="TickTok"></a></li>
+            <li><a href=""><img src="./assets/icons/youtube.png" alt="YouTube"></a></li>
+            <li><a href=""><img src="./assets/icons/facebook.png" alt="Facebook"></a></li>
+            <li><a href=""><img src="./assets/icons/instagram.png" alt="Instagram"></a></li>
+        </ul>
     </footer>
-
-    <script>
-      const menuButton = document.querySelector(".menu-button");
-      const navigation = document.querySelector(".main-navigation");
-      menuButton.addEventListener("click", () => navigation.classList.toggle("open"));
-
-      const videoBox = document.querySelector("#cphVideo");
-      const poster = videoBox.querySelector(".video-poster");
-      const videoEl = videoBox.querySelector(".video-el");
-      poster.addEventListener("click", () => {
-        videoBox.classList.add("playing");
-        videoEl.play();
-      });
-    </script>
-
-    <!-- Mobile Bottom Menu – NUR EINMAL -->
-    <nav class="mobile-menu-bar" aria-label="Mobile Navigation">
-      <a href="#" class="mobile-menu-item" aria-label="Home">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-          stroke-linejoin="round">
-          <path d="M3 10.5L12 3l9 7.5" />
-          <path d="M5 10v9a1 1 0 001 1h4v-5h4v5h4a1 1 0 001-1v-9" />
-        </svg>
-      </a>
-      <a href="#" class="mobile-menu-item" aria-label="Explore">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-          stroke-linejoin="round">
-          <path d="M5 14c0-4 3-8 7-9 1.5 3 2 6 1 9l4 1-3 5-4-1c-2 2-5 2-5-5z" />
-          <path d="M12 5c1-2 3-3 4-3" />
-        </svg>
-      </a>
-      <a href="#" class="mobile-menu-item" aria-label="Saved">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-          stroke-linejoin="round">
-          <path d="M7 4h10a1 1 0 011 1v15l-6-3-6 3V5a1 1 0 011-1z" />
-          <circle cx="12" cy="10" r="2" />
-        </svg>
-      </a>
-      <a href="#" class="mobile-menu-item" aria-label="Profile">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-          stroke-linejoin="round">
-          <path d="M8 4h8a2 2 0 012 2v14l-6-3-6 3V6a2 2 0 012-2z" />
-          <circle cx="12" cy="10" r="2.5" />
-          <path d="M9 14.5c0-1.5 1.3-2.5 3-2.5s3 1 3 2.5" />
-        </svg>
-      </a>
-    </nav>
-
-  </body>
-
+</body>
 </html>

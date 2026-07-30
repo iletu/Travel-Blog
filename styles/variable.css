@@ -1,4 +1,5 @@
 :root {
+<<<<<<< HEAD
   /* Hauptfarben aus deinen Screenshots */
   --primary: #5CA69A;
   --primary-dark: #2D4A3E;
@@ -19,3 +20,10 @@
   --shadow-hover: 0 16px 40px rgba(45,74,62,0.14);
   --max-width: 1280px;
 }
+=======
+    --dark-green: #4EA487;
+    --white: #ffffff;
+    --light-green: #dcede7;
+    --yellow: #F1C953;
+}
+>>>>>>> main
