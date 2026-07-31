@@ -1,3 +1,11 @@
+h2 {
+    color: var(--brown);
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 64px;
+}
+
 .slider {
     height: 450px;
     display: flex;
@@ -51,4 +59,8 @@
     /* background-color: brown; */
     transform: perspective(150px) rotateY(-5deg) translateX(5px);
 
+}
+
+.span-bold {
+    font-weight: 700;
 }
