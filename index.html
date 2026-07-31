@@ -132,37 +132,45 @@
                 <img src="./assets/icons/person_pin.png">
                 Contact form
             </h2>
-            <p> Have a question or an idea to collaborate? Get in touch—I’d love to hear from you and explore how we can
-                work
-                together.
+            <p> Have a question or an idea to collaborate? <br>
+                Get in touch—I’d love to hear from you and explore how we can work together.
             </p>
+
+
             <form class="contact-form">
+
                 <div class="form-row">
-                    <div class="form-field">
+                    <div class="field name">
                         <label for="name">What's your name?</label>
-                        <input type="text" id="name" name="name" autocomplete="name" required>
+                        <input type="text" id="name" name="name" required>
                     </div>
-                    <div class="form-field">
+
+                    <div class="field email">
                         <label for="email">What's your email?</label>
-                        <input type="email" id="enail" name="email" autocomplete="email" required>
+                        <input type="email" id="email" name="email" required>
                     </div>
                 </div>
-                <div class="form-field ">
+
+
+                <div class="field message">
                     <label for="message">How can I help?</label>
-                    <textarea id="message" name="message" rows="1" required></textarea>
+                    <input type="message" id="email" name="message" required>
                 </div>
-                <div class="form-footer">
-                    <input type="checkbox" id="privacy" name="privacy" required>
-                    <label for="privacy"> I've read the<a href="#"> privacy policy</a> and agree to the processing of my
-                        data as outlined.
-                    </label>
+
+                <div class="check-policy">
+                    <input type="checkbox" id="policy" name="policy" value="read" required>
+
+                    <label for="policy"> I've read the <a href="#">privacy policy</a> and agree to the processing of my
+                        data as outlined. </label>
                 </div>
-                <button type="submit">Send</button>
+
+                <button type="submit"> Send </button>
             </form>
         </section>
 
     </main>
 
+    <!-- FOOTER -->
     <footer class="cwp-padding">
         <div class="footer-left">
             <p><img src="./assets/icons/copyright.png" alt="copyright"> Travel Blog 2026</p>
