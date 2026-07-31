@@ -33,6 +33,33 @@ header a {
     color: var(--white);
 }
 
+/* NAVIGATION HOVER  */
+a:hover {
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 120%;
+}
+
+.highlights a:hover {
+    background-image: url("./assets/icons/ahover-highlights.png");
+}
+
+.faq a:hover {
+    background-image: url("./assets/icons/ahover-faq.png");
+}
+
+.contact a:hover {
+    background-image: url("./assets/icons/ahover-contact.png");
+}
+
+/* NAVIGATION ACTIVE */
+a:active {
+    color: var(--yellow);
+    background-image: none !important;
+
+}
+
+
 /* main */
 
 .hero {
@@ -108,7 +135,7 @@ h2 img {
 .slider-wrapper>a {
     height: 100%;
     width: calc(100% / 3);
-    
+
 }
 
 .slider-img {
