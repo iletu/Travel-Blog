@@ -251,7 +251,7 @@ h2 img {
 
 
 /* FAQ */
-.faq {
+.faq-section {
     width: 100%;
     margin-top: 48px;
 
@@ -292,13 +292,13 @@ details[open] p {
     margin-bottom: 0px;
 }
 
-.arrow-faq {
+.arrow-faq-section {
     width: 24px;
     margin-left: 8px;
     transition: transform 200ms;
 }
 
-details[open] .arrow-faq {
+details[open] .arrow-faq-section {
     transform: rotate(-180deg);
 }
 
