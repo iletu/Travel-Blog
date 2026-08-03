@@ -111,10 +111,34 @@ a:active {
 
 .hero {
     height: 520px;
-    background-color: var(--yellow);
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    padding: 0px max(calc(50% - 960px), 146px);
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    position: absolute;
+    z-index: 2;
+    max-width: 340px;
+    animation: textSlideLeft 1s ease-out both;
+    animation-delay: 1.6s;
+}
+
+@keyframes textSlideLeft {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-30vw);
+    }
+
+    /* Zielversatz nach links */
 }
 
 h1 {
@@ -122,6 +146,148 @@ h1 {
     font-weight: 700;
     font-size: 3.75rem;
     color: var(--brown);
+}
+
+.text>p {
+    font-weight: 500;
+    font-size: 1.75rem;
+    color: var(--brown);
+}
+
+.text h1,
+.text p {
+    animation: slideUp 1s ease-out both;
+}
+
+.text h1 {
+    animation-delay: 0.2s;
+}
+
+.text p {
+    animation-delay: 0.5s;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        /* startet 30px tiefer */
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        /* Endposition */
+        opacity: 1;
+    }
+}
+
+.bg-yellow {
+    background-color: var(--yellow);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    animation: slideLeft 2s ease-out both 1.7s;
+    ;
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-70vw);
+    }
+}
+
+@keyframes nudgeUp {
+    from {
+        height: 100%;
+    }
+
+    to {
+        height: 80%;
+    }
+}
+
+
+.hero>svg {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    animation: slideInLeft 2s ease-out both 1.5s;
+
+}
+
+@keyframes slideInLeft {
+    from {
+        left: 100%;
+    }
+
+    /* linke Kante = rechter Containerrand → Element außerhalb */
+    to {
+        left: 10%;
+    }
+
+    /* linke Kante = linker Containerrand */
+}
+
+
+
+.bg-img {
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    padding-left: 30vw;
+    height: inherit;
+}
+
+.circle {
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    left: 33vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    animation: slideInUp 1s ease-in 3.2s both;
+}
+
+.circle img {
+    position: absolute;
+
+    z-index: 3;
+}
+
+.circle svg {
+    animation: rotateDiv linear 8s infinite;
+}
+
+@keyframes rotateDiv {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        bottom: -100%;
+        opacity: 0;
+    }
+
+    /* linke Kante = rechter Containerrand → Element außerhalb */
+    to {
+        bottom: 30%;
+        opacity: 1;
+    }
+
+    /* linke Kante = linker Containerrand */
 }
 
 h2 {
