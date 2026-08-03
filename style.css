@@ -143,12 +143,15 @@ h2 img {
     text-align: center;
     margin-top: 24px;
     margin-bottom: 88px;
+    color: var(--brown);
 }
 
 .highlights {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    width: 100%;
 }
 
 
@@ -246,6 +249,59 @@ h2 img {
 
 }
 
+
+/* FAQ */
+.faq {
+    width: 100%;
+    margin-top: 48px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+details {
+    background-color: var(--yellow);
+    border-radius: 12px;
+    padding: 16px 14px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+summary {
+    font-size: 1.5rem;
+    font-weight: 700;
+    list-style: none;
+    color: var(--brown);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+details[open] p {
+    color: var(--brown);
+    text-align: left;
+    background-color: white;
+    font-size: 1rem;
+
+    padding: 4px 10px;
+    border-radius: 5px;
+    margin-top: 12px;
+    margin-bottom: 0px;
+}
+
+.arrow-faq {
+    width: 24px;
+    margin-left: 8px;
+    transition: transform 200ms;
+}
+
+details[open] .arrow-faq {
+    transform: rotate(-180deg);
+}
+
 /* footer */
 footer {
     background-color: var(--dark-green);
@@ -299,4 +355,82 @@ a {
 
 .footer-right img {
     height: 32px;
+}
+
+/* Contact */
+.contact-form {
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.form-row {
+    width: 100%;
+
+    display: flex;
+    gap: 64px;
+}
+
+.name,
+.email {
+    width: 50%;
+    margin-bottom: 50px;
+
+}
+
+.message {
+    width: 100%;
+}
+
+.field input {
+    border: none;
+    border-bottom: 1px solid var(--brown);
+    outline: none;
+
+    margin-top: 17px;
+    width: 100%;
+}
+
+
+.field label {
+
+    font-family: 'Palanquin';
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--brown);
+}
+
+.check-policy {
+    align-items: center;
+    margin-top: 16px;
+    margin-bottom: 50px;
+
+    text-align: center;
+    font-size: 0.5rem;
+}
+
+.check-policy label {
+    font-size: 0.93rem;
+    color: var(--brown);
+}
+
+label a {
+    display: inline;
+    color: #4EA487;
+}
+
+button {
+    width: 139px;
+    height: 48px;
+    background-color: white;
+    border-radius: 40px;
+    border: 1px solid #30303080;
+    padding: 10px;
+
+    font-family: 'Arima';
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #737373;
 }
