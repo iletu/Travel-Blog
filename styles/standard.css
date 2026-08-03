@@ -2,14 +2,16 @@
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    font-size: 16px;
+
+    font-size: clamp(10px, 1.8vw, 16px);
     font-family: 'Palanquin';
     line-height: 120%;
 }
 
 .cwp-padding {
-    padding: 32px max(calc(50% - 720px), 146px);
+    padding: 32px max(calc(50% - 720px), 120px);
 }
+
 
 .bt-padding {
     padding-top: 80px;
@@ -35,4 +37,47 @@ main {
     flex-direction: row;
     align-items: center;
     gap: 120px;
+}
+
+
+
+/* ----------- RESPONSIVE ---------- */
+
+/* Laptops */
+
+@media screen and (min-width:769px) and (max-width:1280px) {
+
+    .cwp-padding {
+        padding: 32px max(calc(50% - 720px), 80px);
+    }
+}
+
+
+/* Tablets */
+@media screen and (min-width:481px) and (max-width:768px) {
+
+    .cwp-padding {
+        padding: 24px max(calc(50% - 720px), 48px);
+    }
+
+    .bt-padding {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        gap: 60px;
+    }
+}
+
+
+/* handy */
+@media screen and (max-width:480px) {
+
+    .cwp-padding {
+        padding: 8px max(calc(50% - 720px), 16px);
+    }
+
+    .bt-padding {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        gap: 40px;
+    }
 }
