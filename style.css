@@ -116,6 +116,7 @@ a:active {
     align-items: center;
     position: relative;
     padding: 0px max(calc(50% - 960px), 146px);
+    overflow: hidden;
 }
 
 .text {
@@ -137,8 +138,6 @@ a:active {
     to {
         transform: translateX(-30vw);
     }
-
-    /* Zielversatz nach links */
 }
 
 h1 {
@@ -170,25 +169,29 @@ h1 {
 @keyframes slideUp {
     from {
         transform: translateY(100%);
-        /* startet 30px tiefer */
         opacity: 0;
     }
 
     to {
         transform: translateY(0);
-        /* Endposition */
         opacity: 1;
     }
 }
 
 .bg-yellow {
     background-color: var(--yellow);
-    position: absolute;
-    height: 100%;
+    height: 95%;
     width: 100%;
     z-index: 1;
-    animation: slideLeft 2s ease-out both 1.7s;
-    ;
+}
+
+.bg-svg {
+    height: 100%;
+    width: 200%;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    animation: slideLeft 1.4s ease-out both 2s;
 }
 
 @keyframes slideLeft {
@@ -197,62 +200,29 @@ h1 {
     }
 
     to {
-        transform: translateX(-70vw);
+        transform: translateX(-55%);
     }
 }
-
-@keyframes nudgeUp {
-    from {
-        height: 100%;
-    }
-
-    to {
-        height: 80%;
-    }
-}
-
-
-.hero>svg {
-    position: absolute;
-    top: 0;
-    left: 100%;
-    animation: slideInLeft 2s ease-out both 1.5s;
-
-}
-
-@keyframes slideInLeft {
-    from {
-        left: 100%;
-    }
-
-    /* linke Kante = rechter Containerrand → Element außerhalb */
-    to {
-        left: 10%;
-    }
-
-    /* linke Kante = linker Containerrand */
-}
-
-
 
 .bg-img {
     width: 100%;
     position: absolute;
+    top: 0;
+    height: 95%;
     object-fit: cover;
-    padding-left: 30vw;
-    height: inherit;
+    padding-left: 27vw;
 }
 
 .circle {
     width: 160px;
     height: 160px;
     position: absolute;
-    left: 33vw;
+    left: 30vw;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 5;
-    animation: slideInUp 1s ease-in 3.2s both;
+    animation: slideInUp 1.6s ease-in 3.2s both;
 }
 
 .circle img {
@@ -280,14 +250,10 @@ h1 {
         bottom: -100%;
         opacity: 0;
     }
-
-    /* linke Kante = rechter Containerrand → Element außerhalb */
     to {
-        bottom: 30%;
+        bottom: 24%;
         opacity: 1;
     }
-
-    /* linke Kante = linker Containerrand */
 }
 
 h2 {
