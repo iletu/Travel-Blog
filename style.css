@@ -110,12 +110,12 @@ a:active {
 /* main */
 
 .hero {
-    height: 520px;
+    height: 64vh;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    padding: 0px max(calc(50% - 960px), 146px);
+    /* padding: 0px max(calc(50% - 960px), 146px); */
     overflow: hidden;
 }
 
@@ -125,7 +125,7 @@ a:active {
     gap: 32px;
     position: absolute;
     z-index: 2;
-    max-width: 340px;
+    max-width: 320px;
     animation: textSlideLeft 1s ease-out both;
     animation-delay: 1.6s;
 }
@@ -188,6 +188,7 @@ h1 {
 .bg-svg {
     height: 100%;
     width: 200%;
+    left: 0;
     display: flex;
     flex-direction: row;
     position: absolute;
@@ -200,7 +201,7 @@ h1 {
     }
 
     to {
-        transform: translateX(-55%);
+        transform: translateX(-72%);
     }
 }
 
@@ -210,19 +211,27 @@ h1 {
     top: 0;
     height: 95%;
     object-fit: cover;
-    padding-left: 27vw;
+    padding-left: 32vw;
+}
+
+.bg-animation {
+    position: relative;
+}
+
+.bg-animation>img {
+    height: 100%;
 }
 
 .circle {
     width: 160px;
     height: 160px;
     position: absolute;
-    left: 30vw;
+    left: 72%;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 5;
-    animation: slideInUp 1.6s ease-in 3.2s both;
+    animation: slideInUp 1.6s ease-in 2.4s both;
 }
 
 .circle img {
@@ -250,6 +259,7 @@ h1 {
         bottom: -100%;
         opacity: 0;
     }
+
     to {
         bottom: 24%;
         opacity: 1;
@@ -672,7 +682,32 @@ a {
 
 /* handy bis Laptops */
 
-@media screen and (max-width:1280px) {}
+@media screen and (max-width:1280px) {
+
+    .bg-img {
+        padding-left: 40vw;
+    }
+
+    @keyframes slideLeft {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(-64%);
+        }
+    }
+
+    @keyframes textSlideLeft {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(-24vw);
+        }
+    }
+}
 
 
 /* handy bis Tablets */
@@ -737,7 +772,35 @@ a {
         height: 40px;
     }
 
+    .text {
+        max-width: 40vw;
+    }
 
+    .bg-img {
+        padding-left: 24vw;
+    }
+
+    @keyframes textSlideLeft {
+        from {
+            transform: translateX(0);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateX(-22vw);
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideLeft {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(-60%);
+        }
+    }
 
 }
 
@@ -757,5 +820,70 @@ a {
     .name,
     .email {
         width: 100%;
+    }
+
+    .bg-img {
+        padding-left: 0;
+    }
+
+    .bg-svg {
+        top: -320px;
+        animation-delay: 4.2s;
+    }
+
+    .circle {
+        left: 64%;
+        animation-delay: 5.6s
+    }
+
+    .text {
+        animation-duration: 2.4s;
+    }
+
+    @keyframes textSlideLeft {
+        0% {
+            transform: translateX(-16vw);
+            opacity: 0;
+        }
+
+        8% {
+            transform: translateX(-16vw);
+            opacity: 1;
+        }
+
+        80% {
+            transform: translateX(-16vw);
+            opacity: 1;
+        }
+
+
+        100% {
+            transform: translateX(-16vw);
+            opacity: 0;
+        }
+    }
+
+    @keyframes slideInUp {
+        from {
+            bottom: 8%;
+            opacity: 0;
+        }
+
+        to {
+            bottom: 8%;
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideLeft {
+        from {
+            transform: translateX(0);
+            top: 0;
+        }
+
+        to {
+            transform: translateX(-56%);
+            top: -320px;
+        }
     }
 }
