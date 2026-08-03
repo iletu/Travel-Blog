@@ -8,21 +8,21 @@
     <title>Breathtaking Beaches</title>
     <link rel="stylesheet" href="../styles/variable.css">
     <link rel="stylesheet" href="../styles/standard.css">
+    <link rel="stylesheet" href="../styles/font.css">
+    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../styles/graph.css">
     <link rel="stylesheet" href="../styles/carousel.css">
-    <link rel="stylesheet" href="../styles/font.css">
 
-    <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
     <header class="cwp-padding">
         <nav>
-            <a><img src="../assets/img/logo-travel-blog.png" alt="Logo - Travel-Blog"></a>
+            <a href="./index.html"><img src="../assets/img/logo-travel-blog.png" alt="Logo - Travel-Blog"></a>
             <ul>
-                <li><a href="#highlights">Highlights</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li class="highlights"><a href="../index.html">Highlights</a></li>
+                <li class="faq"><a href="../index.html">FAQ</a></li>
+                <li class="contact"><a href="../index.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -75,59 +75,98 @@
 
         <!-- FOTO SLIDER -->
         <h2>TOP 5 beach destinations for 2026</h2>
-        <section class="slider">
+        <section class="slider-top">
             <article class="slider-element"><img src="../assets/img/beach-1.jpg" alt="beach 1"></article>
             <article class="slider-element"><img src="../assets/img/beach-2.jpg" alt="beach 2"></article>
             <article class="slider-element"><img src="../assets/img/beach-3.jpg" alt="beach 3"></article>
+            <article class="slider-element"><img src="../assets/img/beach-4.jpg" alt="beach 4"></article>
+            <article class="slider-element"><img src="../assets/img/beach-5.jpg" alt="beach 5"></article>
         </section>
 
-        <section>
-            <p>Lorem ipsum dolor sit amet consectetur. Egestas a enim vestibulum malesuada. Ante in commodo porta
+        <section class="description">
+            <section class="text">
+                <p>Lorem ipsum dolor sit amet consectetur. Egestas a enim vestibulum malesuada. Ante in commodo porta
+                    scelerisque turpis gravida semper. Lorem ipsum dolor sit amet consectetur. Egestas a enim vestibulum
+                    malesuada. Eta scelerisque turpis gravida semper. Lorem ipsum dolor sit ameta enim vestibulum
+                    malesuada.
+                    Ante intrew commodo porta scelerisque turpis. ipsum dolor sit amet consectetur. Egestas a enim
+                    vestibulum
+                    malesuada. Ante in commodo porta scelerisque turpis gravida semper.
+                </p>
+            </section>
+
+            <section class="list">
+                <p>Lorem ipsum dolor sit amet consectetur. Egestas a enim vestibulum malesuada.
+                </p>
+                <ol>
+                    <li>turpis gravida <span class="span-bold">semper</span>. Lorem ipsum dolor sit amet consectetur.
+                        Egestas a enim
+                        vestibulum malesuada.
+                        Eta scelerisque turpis gravida semper. </li>
+                    <li><span class="span-bold">Lorem ipsum </span>dolor sit ameta enim vestibulum malesuada. Ante
+                        intrew
+                        commodo porta
+                        scelerisque turpis.
+                        ipsum dolor sit amet consectetur. Egestas a enim vestibulum malesuada.</li>
+                    <li>Ante in commodo porta <span class="span-bold">scelerisque</span> turpis gravida semper. </li>
+                    <li>Ipsum dolor sit amet consectetur. Egestas a enim vestibulum malesuada. Ante in commodo porta
+                        scelerisque turpis gravida semper. </li>
+                </ol>
+            </section>
+
+            <section class="pro-tipps">
+
+                <div class="badge">
+                    <img src="../assets/icons/bulp.png" alt=""> Pro tipps
+                </div>
+
+
+                <section class="pro-tipps-description">
+                    <ol>
+                        <li>Ante in commodo porta scelerisque turpis gravida semper. <a href="#"> Useful link.</a>
+                            Egestas a enim vestibulum malesuada. Eta scelerisque turpis gravida semper. </li>
+                        <li>Lorem ipsum dolor sit ameta enim vestibulum malesuada. Ante intrew commodo porta scelerisque
+                            turpis.
+                            ipsum dolor sit amet consectetur. Egestas a enim vestibulum malesuada. Ante in commodo porta
+                            scelerisque turpis gravida semper. </li>
+                    </ol>
+                </section>
+            </section>
+
+            <section class="text">Lorem ipsum dolor sit amet consectetur. Egestas a enim vestibulum malesuada. Ante in
+                commodo porta
                 scelerisque turpis gravida semper. Lorem ipsum dolor sit amet consectetur. Egestas a enim vestibulum
-                malesuada. Eta scelerisque turpis gravida semper. Lorem ipsum dolor sit ameta enim vestibulum malesuada.
-                Ante intrew commodo porta scelerisque turpis. ipsum dolor sit amet consectetur. Egestas a enim
-                vestibulum
-                malesuada. Ante in commodo porta scelerisque turpis gravida semper.
-            </p>
+                malesuada. Eta scelerisque turpis gravida semper. Lorem ipsum dolor sit amet consectetur.
+                Egestas a enim vestibulum malesuada. Ante in commodo porta scelerisque turpis gravida semper. Lorem
+                ipsum
+                dolor sit amet consectetur. Egestas a enim vestibulum malesuada. Ante in commodo porta scelerisque
+                turpis
+                gravida semper. Lorem ipsum dolor sit ameta enim vestibulum malesuada. Antenes intrew commodo porta
+                scelerisque turpis. ipsum dolor sit ametert consectetur. Egestas a enim vestibulum malesuada. Ante in
+                comm
+                odo porta scelerisque turpis gravida semper.
+            </section>
+
+            <!-- SHARE-CTA-CONATINER -->
+            <div class="share-cta">
+                <p class="text-article">Follow me for more content like this, and share the article with your friends!
+                </p>
+                <div class="cta">
+                    <input type="checkbox" id="toggle" hidden></input>
+                    <label for="toggle" class="share-btn"><img src="../assets/icons/cta_share.svg" alt="">Share</label>
+                    <div class="hidden-div">
+                        <img src="../assets/icons/share.svg" alt="">
+                        <ul>
+                            <li><a href="">LinkedIn</a></li>
+                            <li><a href="">WhatsApp</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <img class="arrow" src="../assets/icons/cta_share_arrow.svg" alt="">
+            </div>
+            <!-- SHARE-CTA-CONATINER -->
+
         </section>
-
-        <section>
-            <p>Lorem ipsum dolor sit amet consectetur. Egestas a enim vestibulum malesuada.
-            </p>
-            <ol>
-                <li>turpis gravida <span>semper</span>. Lorem ipsum dolor sit amet consectetur. Egestas a enim
-                    vestibulum malesuada.
-                    Eta scelerisque turpis gravida semper. </li>
-                <li><span>Lorem ipsum </span>dolor sit ameta enim vestibulum malesuada. Ante intrew commodo porta
-                    scelerisque turpis.
-                    ipsum dolor sit amet consectetur. Egestas a enim vestibulum malesuada.</li>
-                <li>Ante in commodo porta <span>scelerisque</span> turpis gravida semper. </li>
-                <li>Ipsum dolor sit amet consectetur. Egestas a enim vestibulum malesuada. Ante in commodo porta
-                    scelerisque turpis gravida semper. </li>
-            </ol>
-        </section>
-
-        <section class="pro-tipps">
-            <ol>
-                <li>Ante in commodo porta scelerisque turpis gravida semper. Useful link. Egestas a enim vestibulum
-                    malesuada. Eta scelerisque turpis gravida semper. </li>
-                <li>Lorem ipsum dolor sit ameta enim vestibulum malesuada. Ante intrew commodo porta scelerisque turpis.
-                    ipsum dolor sit amet consectetur. Egestas a enim vestibulum malesuada. Ante in commodo porta
-                    scelerisque turpis gravida semper. </li>
-            </ol>
-        </section>
-
-        <section>Lorem ipsum dolor sit amet consectetur. Egestas a enim vestibulum malesuada. Ante in commodo porta
-            scelerisque turpis gravida semper. Lorem ipsum dolor sit amet consectetur. Egestas a enim vestibulum
-            malesuada. Eta scelerisque turpis gravida semper. Lorem ipsum dolor sit amet consectetur.
-            Egestas a enim vestibulum malesuada. Ante in commodo porta scelerisque turpis gravida semper. Lorem ipsum
-            dolor sit amet consectetur. Egestas a enim vestibulum malesuada. Ante in commodo porta scelerisque turpis
-            gravida semper. Lorem ipsum dolor sit ameta enim vestibulum malesuada. Antenes intrew commodo porta
-            scelerisque turpis. ipsum dolor sit ametert consectetur. Egestas a enim vestibulum malesuada. Ante in comm
-            odo porta scelerisque turpis gravida semper.
-        </section>
-
-
 
     </main>
 

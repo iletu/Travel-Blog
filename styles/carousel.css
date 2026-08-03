@@ -1,30 +1,46 @@
-.slider {
-    height: 450px;
+h2 {
+    color: var(--brown);
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+/* ------------------------ Bilder Carousel--------------------- */
+.slider-top {
+    width: 100%;
+    max-width: 1300px;
+    min-height: 450px;
+
+    margin: 0 auto;
+
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .slider-element img {
-    width: 300px;
+    display: block;
+    width: 100%;
     height: 440px;
+    object-fit: cover;
 
     border-radius: 16px;
-    /* padding: 16px 8px; */
 }
 
-
-
-
 .slider-element {
+
+    width: 300px;
+    flex-shrink: 0;
+    margin: 0 -35px;
+
     z-index: 1;
 
-    margin: 0px -50px;
-
     border-radius: 16px;
-    /* background-color: blueviolet; */
+    overflow: hidden;
 
-    box-shadow: 0px 1px 1px rgba(3, 7, 18, 0.02),
+    box-shadow:
+        0px 1px 1px rgba(3, 7, 18, 0.02),
         0px 5px 4px rgba(3, 7, 18, 0.03),
         0px 12px 9px rgba(3, 7, 18, 0.05),
         0px 20px 15px rgba(3, 7, 18, 0.06),
@@ -36,19 +52,90 @@
     transition: transform 300ms ease-out;
 }
 
-
-
 .slider-element:hover {
-    margin: 0px 80px;
+    margin: 0px 50px;
     z-index: 2;
-    /* background-color: blanchedalmond; */
-    transform: perspective(150px) rotateY(0deg) translateX(0px) scaleX(1.1) scaleY(1.1);
 
+    transform: perspective(150px) rotateY(0deg) translateX(0px) scaleX(1.1) scaleY(1.1);
 }
 
 .slider-element:hover~.slider-element {
-
-    /* background-color: brown; */
     transform: perspective(150px) rotateY(-5deg) translateX(5px);
+}
 
+
+
+/* --------------------------------- TEXT DESRIPTION------------------------------------------ */
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+}
+
+.text {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+.list {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 0 auto;
+}
+
+.list ol {
+    width: 100%;
+    margin: 0;
+    padding-left: 24px;
+    box-sizing: border-box;
+    margin-bottom: 70px;
+}
+
+/*------------------- Pro Tipps ---------------------*/
+
+.pro-tipps {
+    position: relative;
+    margin: 0 auto;
+}
+
+.badge {
+    width: 200px;
+    background-color: #4EA487;
+    border-radius: 10px;
+    rotate: -14deg;
+
+    color: #F1C953;
+    font-weight: bold;
+    font-size: 1.75rem;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    position: absolute;
+    top: -50px;
+    left: -40px;
+}
+
+.badge img {
+    rotate: 14deg;
+}
+
+.pro-tipps-description {
+    max-width: 1000px;
+    background-color: #4EA48733;
+    padding: 26px 16px 24px 16px;
+    border-radius: 20px;
+}
+
+.pro-tipps-description a {
+    color: #4EA487;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline;
 }
