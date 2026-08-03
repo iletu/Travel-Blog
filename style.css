@@ -250,7 +250,7 @@ h2 img {
 }
 
 
-/* FAQ */
+/*  ------------------ FAQ ------------------ */
 .faq-section {
     width: 100%;
     margin-top: 48px;
@@ -302,7 +302,105 @@ details[open] .arrow-faq-section {
     transform: rotate(-180deg);
 }
 
-/* footer */
+
+
+
+/* ------------------ Contact ------------------  */
+.contact-form {
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-row {
+    width: 100%;
+
+    display: flex;
+    gap: 64px;
+}
+
+.name,
+.email {
+    width: 50%;
+    margin-bottom: 50px;
+}
+
+.message {
+    width: 100%;
+}
+
+.field input {
+    border: none;
+    border-bottom: 1px solid var(--brown);
+    outline: none;
+
+    margin-top: 17px;
+    width: 100%;
+}
+
+.field label {
+    font-family: 'Palanquin';
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--brown);
+}
+
+.check-policy {
+    align-items: center;
+    margin-top: 16px;
+    margin-bottom: 50px;
+
+    text-align: center;
+    font-size: 0.5rem;
+}
+
+.check-policy label {
+    font-size: 0.93rem;
+    color: var(--brown);
+}
+
+label a {
+    display: inline;
+    color: #4EA487;
+}
+
+/* aus dem user agent stylesheet kopiert und blauer hintergrund weg*/
+input:-internal-autofill-selected {
+    background-color: none;
+}
+
+button {
+    width: 139px;
+    height: 48px;
+    padding: 10px;
+
+    border: 1px solid #30303080;
+    border-radius: 40px;
+
+    background-color: white;
+    color: #737373;
+
+    font-family: 'Arima';
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.contact-form:valid button {
+    border: none;
+    background-color: var(--dark-green);
+    color: var(--yellow);
+    cursor: pointer;
+}
+
+.contact-form:valid button:hover {
+    box-shadow:
+        1px 4px 5px rgba(3, 7, 18, 0.04),
+        3px 14px 20px rgba(3, 7, 18, 0.09),
+        7px 32px 46px rgba(3, 7, 18, 0.13);
+}
+
+/* ------------------ footer ------------------ */
 footer {
     background-color: var(--dark-green);
 
@@ -355,82 +453,4 @@ a {
 
 .footer-right img {
     height: 32px;
-}
-
-/* Contact */
-.contact-form {
-    max-width: 1100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-.form-row {
-    width: 100%;
-
-    display: flex;
-    gap: 64px;
-}
-
-.name,
-.email {
-    width: 50%;
-    margin-bottom: 50px;
-
-}
-
-.message {
-    width: 100%;
-}
-
-.field input {
-    border: none;
-    border-bottom: 1px solid var(--brown);
-    outline: none;
-
-    margin-top: 17px;
-    width: 100%;
-}
-
-
-.field label {
-
-    font-family: 'Palanquin';
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: var(--brown);
-}
-
-.check-policy {
-    align-items: center;
-    margin-top: 16px;
-    margin-bottom: 50px;
-
-    text-align: center;
-    font-size: 0.5rem;
-}
-
-.check-policy label {
-    font-size: 0.93rem;
-    color: var(--brown);
-}
-
-label a {
-    display: inline;
-    color: #4EA487;
-}
-
-button {
-    width: 139px;
-    height: 48px;
-    background-color: white;
-    border-radius: 40px;
-    border: 1px solid #30303080;
-    padding: 10px;
-
-    font-family: 'Arima';
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #737373;
 }
