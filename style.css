@@ -920,3 +920,30 @@ a {
         margin-bottom: 32px;
     }
 }
+
+/* IMPRINT */
+
+.imprint {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+
+.source {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+}
+
+.source a{
+    font-family: 'Arima';
+    font-weight: 600;
+    color: var(--dark-green);
+    text-decoration: underline;
+}
+
+.source a {
+    font-weight: 700;
+}
