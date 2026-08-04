@@ -1,0 +1,23 @@
+.list-section {
+    display: flex;
+    flex-direction: column;
+    gap:32px;
+}
+
+.list-section li {
+    list-style-type: disc;
+    margin-left: 2rem;
+}
+
+.pro-tipps {
+    margin-top: 88px !important;
+}
+
+video {
+    border-radius: 64px;
+    width: 100%;
+}
+
+.text-article strong {
+    font-size: 1.5rem;
+}

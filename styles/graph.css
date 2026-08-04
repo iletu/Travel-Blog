@@ -198,7 +198,7 @@ figcaption p {
     transition: opacity 0.8s ease;
 }
 
-.hidden-div ul{
+.hidden-div ul {
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -235,6 +235,11 @@ figcaption p {
 }
 
 @media screen and (max-width: 1279px) {
+
+    .first {
+        margin-top: 0;
+    }
+
     .two-graphs {
         flex-direction: column;
     }
