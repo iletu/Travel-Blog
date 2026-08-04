@@ -26,7 +26,8 @@ h1 {
 dl {
     margin-top: 40px;
     display: flex;
-    gap: 32px;
+    gap: 8px 32px;
+    flex-wrap: wrap;
 }
 
 dl>div {
@@ -220,6 +221,10 @@ figcaption p {
     color: var(--dark-green);
 }
 
+.hidden div a:hover {
+    font-weight: 700
+}
+
 .hidden-div img {
     width: 24px;
 }
@@ -252,4 +257,17 @@ figcaption p {
     }
 }
 
-@media screen and (max-width: 768px) {}
+/* handy bis Tablets */
+@media screen and (max-width:768px) {
+    .graph img {
+        width: 100%;
+    }
+
+    .two-graphs-img {
+        width: 100% !important;
+    }
+
+    .share-cta {
+        width: 100%;
+    }
+}
