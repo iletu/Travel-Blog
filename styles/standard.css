@@ -8,6 +8,13 @@
     line-height: 120%;
 }
 
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: var(--brown);
+}
+
 .cwp-padding {
     padding: 32px max(calc(50% - 720px), 120px);
 }

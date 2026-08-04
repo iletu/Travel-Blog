@@ -10,19 +10,31 @@
     <link rel="stylesheet" href="../styles/variable.css">
     <link rel="stylesheet" href="../styles/font.css">
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../styles/header_footer.css">
     <link rel="stylesheet" href="../styles/standard.css">
     <link rel="stylesheet" href="../styles/graph.css">
 </head>
 
 <body>
     <!-- HEADER -->
+    <!-- Navigation Handy -->
+    <div>
+        <ul class="nav-handy">
+            <li><a href="../index.html"><img src="../assets/icons/nav_home.png" alt="home"></a></li>
+            <li><a href="../index.html#highlights"><img src="../assets/icons/nav_rocket_launch.png"
+                        alt="rocket_launch"></a></li>
+            <li><a href="../index.html#faq"><img src="../assets/icons/nav_live_help.png" alt="faq"></a></li>
+            <li><a href="../index.html#contact"><img src="../assets/icons/nav_person_pin.png" alt="person_pin"></a></li>
+        </ul>
+    </div>
+    <!-- Navigation Handy ENDE -->
     <header class="cwp-padding">
         <nav>
             <a href="../index.html"><img src="../assets/img/logo-travel-blog.png" alt="Logo - Travel-Blog"></a>
             <ul>
-                <li><a href="#highlights">Highlights</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li class="highlights"><a href="../index.html#highlights">Highlights</a></li>
+                <li class="faq"><a href="../index.html#faq">FAQ</a></li>
+                <li class="contact"><a href="../index.html#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -42,7 +54,7 @@
                     <div>
                         <img class="calender-icon" src="../assets/icons/calendar_month.svg" alt="">
                         <dt>Date:</dt>
-                        <dd><time datetime="2026-04-02">02.04.2026</time></dd>
+                        <dd><time datetime="2026-04-02">04.08.2026</time></dd>
                     </div>
                     <div>
                         <img class="eyeglass-icon" src="../assets/icons/eyeglasses_2.svg" alt="">
@@ -63,8 +75,8 @@
             </div>
             <div class="author-info">
                 <figure>
-                    <img src="../assets/img/profil-picture.jpg" alt="Profilbild des Autors">
-                    <figcaption>Tamara Walker<p>Author</p>
+                    <img src="../assets/img/profil-sv.jpg" alt="Profilbild des Autors">
+                    <figcaption>Stefanie Vengels<p>Author</p>
                     </figcaption>
                 </figure>
                 <p>I’ve been traveling since 2017, chasing moments instead of plans.
@@ -77,28 +89,25 @@
 
         <!-- TEXT -->
         <section>
-            <p class="text-article first">Lorem ipsum dolor sit amet consectetur. Egestas a enim vestibulum malesuada.
-                Ante in
-                commodo porta
-                scelerisque turpis gravida semper. Lorem ipsum dolor sit amet consectetur. Egestas a enim vestibulum
-                malesuada. Eta scelerisque turpis gravida semper.
-                Lorem ipsum dolor sit ameta enim vestibulum malesuada. Ante intrew commodo porta scelerisque turpis.
-                ipsum dolor sit amet consectetur. Egestas a enim vestibulum malesuada. Ante in commodo porta scelerisque
-                turpis gravida semper. </p>
+            <p class="text-article first">Pattaya doesn't ease you in — it grabs you. One minute you're stepping off the
+                bus, the next you're swept into a stream of scooters, street vendors and salt air rolling in off the
+                gulf. The city runs on a rhythm all its own: lazy afternoons on the sand, then a nightlife that pulls
+                the whole promenade awake after dark. Beyond the neon, there's more here than the postcards suggest —
+                quiet temples, offshore islands, and food stalls that alone are worth the trip. Whatever pace you're
+                after, Pattaya has a version of the day waiting for you.</p>
         </section>
         <!-- TEXT -->
 
         <!-- ONE-GRAPH -->
         <section class="graph">
             <h2>Rain periods in Pattaya</h2>
-            <img src="../assets/img/Graph01.png" alt="Grafik der Regenperioden in Pattaya">
-            <p>Lorem ipsum dolor sit amet consectetur. Egestas a enim vestibulum malesuada. Ante in commodo porta
-                scelerisque turpis gravida semper. Lorem ipsum dolor sit amet consectetur. Egestas a enim vestibulum
-                malesuada. Eta scelerisque turpis gravida semper.
-                Lorem ipsum dolor sit ameta enim vestibulum malesuada. Ante intrew commodo porta scelerisque turpis.
-                ipsum dolor sit amet consectetur. Egestas a enim vestibulum malesuada. Ante in commodo porta scelerisque
-                turpis gravida semper. </p>
-
+            <img src="../assets/img/Graph01.webp" alt="Grafik der Regenperioden in Pattaya">
+            <p>Timing matters here. Rainfall climbs steeply into the summer months, peaking at well over 250 mm when the
+                monsoon settles in — expect short, heavy downpours rather than all-day grey. Autumn stays wet before
+                things ease off, and by winter the city dries out to its calmest, most comfortable stretch. If you're
+                chasing sun and dry beach days, the winter window is your safest bet. Travel in summer and you'll trade
+                a little planning for fewer crowds and greener surroundings — just pack for the rain and keep your days
+                flexible.</p>
         </section>
         <!-- ONE-GRAPH -->
 
@@ -106,19 +115,20 @@
         <section class="two-graphs">
             <div class="graph two">
                 <h2>Popular beach activities</h2>
-                <p class="text-graph-two">Lorem ipsum dolor sit amet consectetur. Egestas a enim vestibulum malesuada.
-                    Ante in commodo porta
-                    scelerisque turpis gravida semper. Lorem ipsum dolor sit amet consectetur. Egestas a enim vestibulum
-                    malesuada. Eta scelerisque turpis gravida semper.</p>
-                <img class="two-graphs-img" src="../assets/img/Graph02.png"
+                <p class="text-graph-two">The water does most of the talking here. Snorkeling leads the pack at 30 %,
+                    with the nearby islands offering clear, shallow reefs that are easy to reach on a day trip.
+                    Sunbathing and beach sports each pull a solid 25 %, while swimming rounds things out at 20 % — proof
+                    that most visitors would rather be in the sea than beside it.</p>
+                <img class="two-graphs-img" src="../assets/img/Graph02.webp"
                     alt="Grafik der Verteilung von Strandaktivitäten">
             </div>
             <div class="graph two">
                 <h2>Accommodation expenses</h2>
-                <p class="text-graph-two">Dolor sit amet consectetur. Egestas a enim vesti bulum malesuada. Ante in
-                    commodo porta sceleri sque
-                    turpis gravida semper. Lorem ipsum dolor sit amet consectetur.</p>
-                <img class="two-graphs-img" src="../assets/img/Graph03.png"
+                <p class="text-graph-two">There's a bed here for every budget. A hostel runs around $20 a night, a
+                    standard hotel about $30, and a private villa roughly $40 — comfortable without the splurge. Luxury
+                    resorts top the scale at $60, but even that stays gentle compared to most beach destinations.
+                    Pattaya lets you spend little or lean in, without cutting the trip short.</p>
+                <img class="two-graphs-img" src="../assets/img/Graph03.webp"
                     alt="Grafik der Verteilung von Strandaktivitäten">
             </div>
         </section>
@@ -126,19 +136,14 @@
 
         <!-- TEXT -->
         <section>
-            <p class="text-article second">Lorem ipsum dolor sit amet consectetur. Egestas a enim vestibulum malesuada.
-                Ante
-                in
-                commodo porta scelerisque turpis gravida semper. Lorem ipsum dolor sit amet consectetur. Egestas a enim
-                vestibulum malesuada. Eta scelerisque turpis gravida semper. Lorem ipsum dolor sit amet consectetur.
-                Egestas a enim vestibulum malesuada. Ante in commodo porta scelerisque turpis gravida semper. Lorem
-                ipsum
-                dolor sit amet consectetur. Egestas a enim vestibulum malesuada. Ante in commodo porta scelerisque
-                turpis
-                gravida semper. Lorem ipsum dolor sit ameta enim vestibulum malesuada. Antenes intrew commodo porta
-                scelerisque turpis. ipsum dolor sit ametert consectetur. Egestas a enim vestibulum malesuada. Ante in
-                comm
-                odo porta scelerisque turpis gravida semper. </p>
+            <p class="text-article second">Once the sun drops, Pattaya changes gear entirely. The promenade fills up,
+                the food stalls fire back to life, and the choice becomes less about what to do and more about how late
+                you want to stay out. This is where the city earns its reputation — but it's also where it surprises
+                you. Slip a few streets back from the water and you'll find quiet noodle shops, night markets stacked
+                with fresh papaya, and rooftop bars with the whole coastline laid out below. Spend your days
+                island-hopping and snorkeling, your evenings eating your way through the markets, and you'll understand
+                why so many travelers plan a short stop and end up staying longer. Pattaya isn't a place you tick off a
+                list — it's one you keep circling back to.</p>
         </section>
         <!-- TEXT -->
 
@@ -151,8 +156,8 @@
                 <div class="hidden-div">
                     <img src="../assets/icons/share.svg" alt="">
                     <ul>
-                        <li><a href="">LinkedIn</a></li>
-                        <li><a href="">WhatsApp</a></li>
+                        <li><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://wa.me/">WhatsApp</a></li>
                     </ul>
                 </div>
             </div>
@@ -166,18 +171,21 @@
         <div class="footer-left">
             <p><img src="../assets/icons/copyright.png" alt="copyright"> Travel Blog 2026</p>
             <ul>
-                <li><a href="./imprint.html">Imprint</a></li>
-                <li><a href="./cookie_preferences.html">Cookie Preferences</a></li>
+                <li><a href="imprint.html">Imprint</a></li>
+                <li><a href="privacy_policy.html">Privacy Policy</a></li>
             </ul>
         </div>
         <ul class="footer-right">
-            <li><a href=""><img src="../assets/icons/tiktok.png" alt="TickTok"></a></li>
-            <li><a href=""><img src="../assets/icons/youtube.png" alt="YouTube"></a></li>
-            <li><a href=""><img src="../assets/icons/facebook.png" alt="Facebook"></a></li>
-            <li><a href=""><img src="../assets/icons/instagram.png" alt="Instagram"></a></li>
+            <li><a href="https://www.tiktok.com/" target="_blank"><img src="../assets/icons/tiktok.png"
+                        alt="TickTok"></a></li>
+            <li><a href="https://www.youtube.com/" target="_blank"><img src="../assets/icons/youtube.png"
+                        alt="YouTube"></a></li>
+            <li><a href="https://www.facebook.com/" target="_blank"><img src="../assets/icons/facebook.png"
+                        alt="Facebook"></a></li>
+            <li><a href="https://www.instagram.com/" target="_blank"><img src="../assets/icons/instagram.png"
+                        alt="Instagram"></a></li>
         </ul>
     </footer>
-    <!-- FOOTER -->
 </body>
 
 </html>

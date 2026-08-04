@@ -1,0 +1,153 @@
+/* header */
+
+header {
+    background-color: var(--dark-green);
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 72px;
+}
+
+header img {
+    padding-right: 102px;
+    height: 72px;
+}
+
+header a {
+    font-family: 'Arima';
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+/* NAVIGATION HOVER  */
+nav ul li a {
+    position: relative;
+    display: inline-block;
+}
+
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.highlights a::after {
+    background-image: url("../assets/icons/ahover-highlights.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+    width: 120px;
+    height: 20px;
+    left: 50%;
+    bottom: -2px;
+}
+
+.faq a::after {
+    background-image: url("../assets/icons/ahover-faq.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+    width: 60px;
+    height: 10px;
+    left: 50%;
+    bottom: -2px;
+}
+
+.contact a::after {
+    background-image: url("../assets/icons/ahover-contact.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+    width: 100px;
+    height: 20px;
+    left: 50%;
+    bottom: -2px;
+}
+
+nav ul li a:hover::after {
+    opacity: 1;
+}
+
+
+/* NAVIGATION ACTIVE */
+a:active {
+    color: var(--yellow);
+}
+
+.highlights a:active,
+.faq a:active,
+.contact a:active {
+    background-image: none;
+}
+
+/* ------------------ footer ------------------ */
+footer {
+    background-color: var(--dark-green);
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Palanquin';
+    font-weight: 400;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 72px;
+}
+
+.footer-left img {
+    height: 24px;
+    padding-right: 4px;
+}
+
+.footer-left p {
+    color: var(--white);
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+}
+
+.footer-left ul,
+a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 72px;
+}
+
+.footer-left a {
+    font-size: 1rem;
+    color: var(--white);
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.footer-right img {
+    height: 32px;
+}
+
+.nav-handy {
+    display: none;
+}
