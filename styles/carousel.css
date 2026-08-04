@@ -1,16 +1,27 @@
-h2 {
+.top5-headline {
+    width: 100%;
+
+    text-align: center;
+    /* display: flex; */
+    justify-content: center;
     color: var(--brown);
     font-size: 2rem;
     font-weight: 600;
-    text-align: center;
 }
 
 
 /* ------------------------ Bilder Carousel--------------------- */
+.top5-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .slider-top {
     width: 100%;
     max-width: 1300px;
     min-height: 450px;
+
 
     margin: 0 auto;
 
@@ -22,16 +33,20 @@ h2 {
 .slider-element img {
     display: block;
     width: 100%;
-    height: 440px;
+    height: 100%;
+
+
     object-fit: cover;
 
     border-radius: 16px;
 }
 
 .slider-element {
+    width: 16vw;
+    aspect-ratio: 2/3;
+    max-width: 300px;
+    min-width: 200px;
 
-    width: 300px;
-    flex-shrink: 0;
     margin: 0 -35px;
 
     z-index: 1;
@@ -74,7 +89,7 @@ h2 {
     gap: 48px;
 }
 
-.text {
+.text-carousel {
     width: 100%;
     max-width: 1200px;
 
@@ -138,4 +153,127 @@ h2 {
     text-decoration: none;
     font-weight: 700;
     display: inline;
+}
+
+
+
+/* ----------- RESPONSIVE ---------- */
+
+/* handy & Tablets */
+@media screen and (max-width:1280px) {
+
+    /* .slider-top {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        overflow: hidden;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2em;
+        padding-bottom: 2.5em;
+    } */
+
+    /* .slider-top {
+        overflow: hidden;
+        max-width: 400px;
+    } */
+
+
+    /* .top5-slider>input[type="radio"] {
+        position: absolute;
+        bottom: 16px;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .top5-track {
+        display: flex;
+        gap: 20px;
+        transition: transform 500ms ease-in-out;
+    }
+
+    .top5-card {
+        position: relative;
+        flex-shrink: 0;
+        width: 180px;
+        transform: perspective(600px) rotateY(-35deg);
+        transition:
+            transform 400ms ease-in-out,
+            margin 400ms ease-in-out;
+    }
+
+    .top5-card img {
+        display: block;
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        border-radius: 16px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    }
+
+    #top5-one:checked~.top5-track {
+        transform: translateX(400px);
+    }
+
+    #top5-two:checked~.top5-track {
+        transform: translateX(200px);
+    }
+
+    #top5-three:checked~.top5-track {
+        transform: translateX(0);
+    }
+
+    #top5-four:checked~.top5-track {
+        transform: translateX(-200px);
+    }
+
+    #top5-five:checked~.top5-track {
+        transform: translateX(-400px);
+    }
+
+    #top5-2:checked~.top5-track .top5-card:nth-child(-n + 1),
+    #top5-3:checked~.top5-track .top5-card:nth-child(-n + 2),
+    #top5-4:checked~.top5-track .top5-card:nth-child(-n + 3),
+    #top5-five:checked~.top5-track .top5-card:nth-child(-n + 4) {
+        transform: perspective(600px) rotateY(35deg);
+    }
+
+    #top5-1:checked~.top5-track .top5-card:nth-child(1),
+    #top5-2:checked~.top5-track .top5-card:nth-child(2),
+    #top5-3:checked~.top5-track .top5-card:nth-child(3),
+    #top5-4:checked~.top5-track .top5-card:nth-child(4),
+    #top5-five:checked~.top5-track .top5-card:nth-child(5) {
+        transform: perspective(600px) rotateY(0deg);
+    }
+
+    .top5-dots {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 1em;
+    }
+
+    .top5-dots label {
+        width: 24px;
+        height: 24px;
+        border-radius: 12px;
+        background-color: rgba(78, 164, 135, 0.25);
+        cursor: pointer;
+        transition:
+            width 300ms ease-in-out,
+            background-color 300ms ease-in-out;
+    }
+
+    #top5-1:checked~.top5-dots label:nth-child(1),
+    #top5-2:checked~.top5-dots label:nth-child(2),
+    #top5-3:checked~.top5-dots label:nth-child(3),
+    #top5-4:checked~.top5-dots label:nth-child(4),
+    #top5-5:checked~.top5-dots label:nth-child(5) {
+        width: 36px;
+        background-color: var(--color-primary);
+    } */
 }
