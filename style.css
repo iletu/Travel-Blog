@@ -494,6 +494,9 @@ details[open] .arrow-faq-section {
 
     margin-top: 17px;
     width: 100%;
+    color: var(--dark-green);
+    font-weight: 500;
+    font-size: 1.5rem;
 }
 
 .field label {
@@ -504,12 +507,14 @@ details[open] .arrow-faq-section {
 }
 
 .check-policy {
-    align-items: center;
     margin-top: 16px;
     margin-bottom: 50px;
 
     text-align: center;
     font-size: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .check-policy label {
@@ -631,6 +636,17 @@ button {
         6px 4px 20px rgba(3, 7, 18, 0.07),
         11px 8px 36px rgba(3, 7, 18, 0.05),
         17px 12px 56px rgba(3, 7, 18, 0.02);
+}
+
+.error-msg {
+    display: none;
+    color: var(--error) !important;
+    font-size: 1rem !important;
+    margin: 0 !important;
+}
+
+.contact-form:has(input:user-invalid) .error-msg {
+    display: block;
 }
 
 /* ------------------ footer ------------------ */
