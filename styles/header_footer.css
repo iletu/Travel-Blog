@@ -47,7 +47,7 @@ nav ul li a::after {
 }
 
 .highlights a::after {
-    background-image: url("./assets/icons/ahover-highlights.png");
+    background-image: url("../assets/icons/ahover-highlights.png");
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: contain;
@@ -58,7 +58,7 @@ nav ul li a::after {
 }
 
 .faq a::after {
-    background-image: url("./assets/icons/ahover-faq.png");
+    background-image: url("../assets/icons/ahover-faq.png");
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: contain;
@@ -69,7 +69,7 @@ nav ul li a::after {
 }
 
 .contact a::after {
-    background-image: url("./assets/icons/ahover-contact.png");
+    background-image: url("../assets/icons/ahover-contact.png");
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: contain;
