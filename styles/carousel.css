@@ -6,6 +6,7 @@
     font-size: 2rem;
     font-weight: 600;
 }
+
 /* ------------------------ Bilder Carousel--------------------- */
 .top5-wrapper {
     width: 100%;
@@ -104,7 +105,13 @@
     font-size: 1.5rem;
 }
 
+.mobil {
+    display: none;
+}
+
 @media screen and (max-width:768px) {
+
+
 
     .slider-window {
         overflow: hidden;
@@ -138,6 +145,7 @@
         cursor: pointer;
         transition: background 0.2s, width 0.2s;
     }
+
     /* aktiver Punkt */
     #top5-1:checked~.dots label:nth-child(1),
     #top5-2:checked~.dots label:nth-child(2),
@@ -148,6 +156,7 @@
         background-color: var(--dark-green);
         border-radius: 20px;
     }
+
     /* Streifen verschieben — NEU */
     #top5-1:checked~.slider-window .slider-top {
         transform: translateX(0);
@@ -168,6 +177,7 @@
     #top5-5:checked~.slider-window .slider-top {
         transform: translateX(calc(-4 * (var(--card) + var(--gap))));
     }
+
     /* aktives Bild — nur .slider-top → .slider-window .slider-top */
     #top5-1:checked~.slider-window .slider-element:nth-child(1),
     #top5-2:checked~.slider-window .slider-element:nth-child(2),
@@ -177,6 +187,7 @@
         z-index: 10;
         transform: perspective(250px) rotateY(0deg) translateX(0px);
     }
+
     /* danach kippen — ebenso umschreiben */
     #top5-1:checked~.slider-window .slider-element:nth-child(1)~.slider-element,
     #top5-2:checked~.slider-window .slider-element:nth-child(2)~.slider-element,
@@ -227,6 +238,7 @@
     font-size: 1.5rem;
     font-weight: 700;
 }
+
 /*------------------- Pro Tipps ---------------------*/
 
 .pro-tipps {
@@ -267,12 +279,22 @@
     font-weight: 700;
     display: inline;
 }
+
 /* ----------- RESPONSIVE ---------- */
 
 /* handy & Tablets */
 @media screen and (max-width:480px) {
 
-.badge {
-    left: 0;
-}
+    .desktop {
+        display: none;
+    }
+
+    .mobil {
+        display: flex;
+        bottom: 32px;
+    }
+
+    .badge {
+        left: 0;
+    }
 }
