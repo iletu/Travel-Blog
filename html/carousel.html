@@ -6,11 +6,11 @@
     <link rel="icon" type="image/x-icon" href="../assets/img/logo-travel-blog.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Breathtaking Beaches</title>
+    <link rel="stylesheet" href="../styles/header_footer.css">
     <link rel="stylesheet" href="../styles/variable.css">
     <link rel="stylesheet" href="../styles/standard.css">
     <link rel="stylesheet" href="../styles/font.css">
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../styles/header_footer.css">
     <link rel="stylesheet" href="../styles/graph.css">
     <link rel="stylesheet" href="../styles/carousel.css">
 
@@ -21,11 +21,11 @@
     <!-- Navigation Handy -->
     <div>
         <ul class="nav-handy">
-            <li><a href="../index.html"><img src="../assets/icons/nav_home.png" alt="home"></a></li>
-            <li><a href="../index.html#highlights"><img src="../assets/icons/nav_rocket_launch.png"
-                        alt="rocket_launch"></a></li>
-            <li><a href="../index.html#faq"><img src="../assets/icons/nav_live_help.png" alt="faq"></a></li>
-            <li><a href="../index.html#contact"><img src="../assets/icons/nav_person_pin.png" alt="person_pin"></a></li>
+            <li><a href="../index.html"><img src="../assets/icons/Home.png" alt="home"></a></li>
+            <li><a href="../index.html#highlights"><img src="../assets/icons/rocket_launch.png" alt="rocket_launch"></a>
+            </li>
+            <li><a href="../index.html#faq"><img src="../assets/icons/live_help.png" alt="faq"></a></li>
+            <li><a href="../index.html#contact"><img src="../assets/icons/person_pin.png" alt="person_pin"></a></li>
         </ul>
     </div>
     <!-- Navigation Handy ENDE -->
@@ -53,7 +53,7 @@
                     <div>
                         <img class="calender-icon" src="../assets/icons/calendar_month.svg" alt="">
                         <dt>Date:</dt>
-                        <dd><time datetime="2026-01-26">02.04.2026</time></dd>
+                        <dd><time datetime="2026-01-26">26.01.2026</time></dd>
                     </div>
                     <div>
                         <img class="eyeglass-icon" src="../assets/icons/eyeglasses_2.svg" alt="">
@@ -93,20 +93,28 @@
 
 
         <section class="top5-wrapper">
-            <div class="slider-top">
-                <article class="slider-element"><img src="../assets/img/beach-1.webp" alt="beach 1"></article>
-                <article class="slider-element"><img src="../assets/img/beach-2.webp" alt="beach 2"></article>
-                <article class="slider-element"><img src="../assets/img/beach-3.webp" alt="beach 3"></article>
-                <article class="slider-element"><img src="../assets/img/beach-4.webp" alt="beach 4"></article>
-                <article class="slider-element"><img src="../assets/img/beach-5.webp" alt="beach 5"></article>
+            <input type="radio" name="top5" id="top5-1" checked>
+            <input type="radio" name="top5" id="top5-2">
+            <input type="radio" name="top5" id="top5-3">
+            <input type="radio" name="top5" id="top5-4">
+            <input type="radio" name="top5" id="top5-5">
+
+            <div class="slider-window">
+                <div class="slider-top">
+                    <article class="slider-element"><img src="../assets/img/beach-1.webp" alt="beach 1"></article>
+                    <article class="slider-element"><img src="../assets/img/beach-2.webp" alt="beach 2"></article>
+                    <article class="slider-element"><img src="../assets/img/beach-3.webp" alt="beach 3"></article>
+                    <article class="slider-element"><img src="../assets/img/beach-4.webp" alt="beach 4"></article>
+                    <article class="slider-element"><img src="../assets/img/beach-5.webp" alt="beach 5"></article>
+                </div>
             </div>
 
             <div class="dots">
-                <input type="radio" name="top5" value="top5-one" checked>
-                <input type="radio" name="top5" value="top5-two">
-                <input type="radio" name="top5" value="top5-three">
-                <input type="radio" name="top5" value="top5-four">
-                <input type="radio" name="top5" value="top5-five">
+                <label for="top5-1"></label>
+                <label for="top5-2"></label>
+                <label for="top5-3"></label>
+                <label for="top5-4"></label>
+                <label for="top5-5"></label>
             </div>
         </section>
 
@@ -116,32 +124,26 @@
 
         <section class="description">
             <section class="text-carousel">
-                <p>Lorem ipsum dolor sit amet consectetur. Egestas a enim vestibulum malesuada. Ante in commodo porta
-                    scelerisque turpis gravida semper. Lorem ipsum dolor sit amet consectetur. Egestas a enim vestibulum
-                    malesuada. Eta scelerisque turpis gravida semper. Lorem ipsum dolor sit ameta enim vestibulum
-                    malesuada.
-                    Ante intrew commodo porta scelerisque turpis. ipsum dolor sit amet consectetur. Egestas a enim
-                    vestibulum
-                    malesuada. Ante in commodo porta scelerisque turpis gravida semper.
+                <p>Some beaches you visit. Others stay with you long after the sand's washed off your feet. This list is
+                    about the second kind — the coastlines that stop you mid-step, where the water shifts through a
+                    dozen shades of blue and the horizon feels like it's holding its breath. I've walked a lot of
+                    shorelines chasing that feeling, and these are the ones worth planning a whole trip around. Not just
+                    pretty places, but the ones that rearrange something in you.
                 </p>
             </section>
 
             <section class="list">
-                <p>Lorem ipsum dolor sit amet consectetur. Egestas a enim vestibulum malesuada.
+                <p>Before you pack the sunscreen, a few things separate a good beach day from a perfect one:
                 </p>
                 <ol>
-                    <li>turpis gravida <span class="span-bold">semper</span>. Lorem ipsum dolor sit amet consectetur.
-                        Egestas a enim
-                        vestibulum malesuada.
-                        Eta scelerisque turpis gravida semper. </li>
-                    <li><span class="span-bold">Lorem ipsum </span>dolor sit ameta enim vestibulum malesuada. Ante
-                        intrew
-                        commodo porta
-                        scelerisque turpis.
-                        ipsum dolor sit amet consectetur. Egestas a enim vestibulum malesuada.</li>
-                    <li>Ante in commodo porta <span class="span-bold">scelerisque</span> turpis gravida semper. </li>
-                    <li>Ipsum dolor sit amet consectetur. Egestas a enim vestibulum malesuada. Ante in commodo porta
-                        scelerisque turpis gravida semper. </li>
+                    <li>Go for the <span class="span-bold">light, not the crowd.</span> The best hours are the first and the last — soft sun, empty
+                        sand, and colours the midday glare washes out.</li>
+                    <li><span class="span-bold">Pack less, notice more.</span> A towel, water, and a good pair of eyes beat a bag full of gear. The
+                        point is to be there, not to be busy.</li>
+                    <li>Respect the <span class="span-bold">water and the locals.</span> Check the tides, read the flags, and treat every shore like
+                        someone's home — because it usually is.</li>
+                    <li>Stay for the <span class="span-bold">change of light.</span> Most people leave before the best part. Sit tight through sunset
+                        and you'll see why these places earn their reputation.</li>
                 </ol>
             </section>
 
@@ -154,29 +156,23 @@
 
                 <section class="pro-tipps-description">
                     <ol>
-                        <li>Ante in commodo porta scelerisque turpis gravida semper. <a href="#"> Useful link.</a>
-                            Egestas a enim vestibulum malesuada. Eta scelerisque turpis gravida semper. </li>
-                        <li>Lorem ipsum dolor sit ameta enim vestibulum malesuada. Ante intrew commodo porta scelerisque
-                            turpis.
-                            ipsum dolor sit amet consectetur. Egestas a enim vestibulum malesuada. Ante in commodo porta
-                            scelerisque turpis gravida semper. </li>
+                        <li>Book accommodation a little inland rather than beachfront. You'll pay a fraction of the
+                            price and the walk to the water is part of the charm. <a
+                                href="https://www.booking.com">Compare stays here.</a>
+                        </li>
+                        <li>Chase the shoulder season. Just before or after peak months you get the same water and
+                            warmth with half the crowds and lower prices — the sweet spot most travellers miss.</li>
                     </ol>
                 </section>
             </section>
 
-            <section class="text-carousel">Lorem ipsum dolor sit amet consectetur. Egestas a enim vestibulum malesuada.
-                Ante in
-                commodo porta
-                scelerisque turpis gravida semper. Lorem ipsum dolor sit amet consectetur. Egestas a enim vestibulum
-                malesuada. Eta scelerisque turpis gravida semper. Lorem ipsum dolor sit amet consectetur.
-                Egestas a enim vestibulum malesuada. Ante in commodo porta scelerisque turpis gravida semper. Lorem
-                ipsum
-                dolor sit amet consectetur. Egestas a enim vestibulum malesuada. Ante in commodo porta scelerisque
-                turpis
-                gravida semper. Lorem ipsum dolor sit ameta enim vestibulum malesuada. Antenes intrew commodo porta
-                scelerisque turpis. ipsum dolor sit ametert consectetur. Egestas a enim vestibulum malesuada. Ante in
-                comm
-                odo porta scelerisque turpis gravida semper.
+            <section class="text-carousel">What ties these beaches together isn't the postcard shot — it's the way they
+                make time slow down. You stop checking your phone. You start noticing the small things: the pull of the
+                tide, the shift of the wind, the way the sand changes colour as the day turns. That's the real reason I
+                keep coming back to the coast. Not for the swimming or the tan, but for that rare stillness you only
+                find where the land runs out and the ocean takes over. Wherever you go from this list, don't rush it.
+                Give yourself a full day, let the plans fall away, and let the place do the rest. The best beaches
+                aren't destinations you reach — they're moments you fall into.
             </section>
 
             <!-- SHARE-CTA-CONATINER -->
@@ -189,8 +185,8 @@
                     <div class="hidden-div">
                         <img src="../assets/icons/share.svg" alt="">
                         <ul>
-                            <li><a href="">LinkedIn</a></li>
-                            <li><a href="">WhatsApp</a></li>
+                            <li><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></li>
+                            <li><a href="https://wa.me/">WhatsApp</a></li>
                         </ul>
                     </div>
                 </div>
